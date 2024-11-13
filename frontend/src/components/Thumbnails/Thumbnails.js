@@ -7,7 +7,7 @@ export default function Thumbnails({ foods }) {
   return (
     <ul className={classes.list}>
       {foods.map(food => (
-        <li key={food.id}>
+        <li key={food.id} className={classes.card}>
           <Link to={`/food/${food.id}`}>
             <img
               className={classes.image}
@@ -15,7 +15,7 @@ export default function Thumbnails({ foods }) {
               alt={food.name}
             />
 
-            <div className={classes.content}>
+            <div className={`${classes.content}`}>
               <div className={classes.name}>{food.name}</div>
               <span
                 className={`${classes.favorite} ${

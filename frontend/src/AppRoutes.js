@@ -17,6 +17,7 @@ import FoodsAdminPage from './pages/FoodsAdmin/FoodsAdminPage';
 import FoodEditPage from './pages/FoodEdit/FoodEditPage';
 import UsersPage from './pages/UsersPage/UsersPage';
 import UserEditPage from './pages/UserEdit/UserEditPage';
+import DemoPage from './pages/Payment/DemoPage';
 
 export default function AppRoutes() {
   return (
@@ -41,6 +42,7 @@ export default function AppRoutes() {
         element={
           <AuthRoute>
             <PaymentPage />
+            {/* <DemoPage /> */}
           </AuthRoute>
         }
       />

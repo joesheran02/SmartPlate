@@ -104,7 +104,7 @@ export default function FoodEditPage() {
 
           <Input
             type="text"
-            label="Cook Time"
+            label="Preparation Time"
             {...register('cookTime', { required: true })}
             error={errors.cookTime}
           />

@@ -36,14 +36,14 @@ export default function ProfilePage() {
             error={errors.name}
           />
           <Input
-            defaultValue={user.address}
+            defaultValue={user.class}
             type="text"
-            label="Address"
-            {...register('address', {
+            label="Admission Number"
+            {...register('class', {
               required: true,
               minLength: 10,
             })}
-            error={errors.address}
+            error={errors.class}
           />
 
           <Button type="submit" text="Update" backgroundColor="#009e84" />

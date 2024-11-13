@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 
 * {
   box-sizing: border-box;
@@ -10,7 +11,8 @@ html {
 
 body {
   margin: 0;
-  font-family: Quicksand, sans-serif;
+  /* font-family: Quicksand, sans-serif; */
+  font-family: "Oxanium", sans-serif;
 }
 
 a {

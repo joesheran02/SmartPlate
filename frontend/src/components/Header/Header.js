@@ -13,7 +13,7 @@ export default function Header() {
     <header className={classes.header}>
       <div className={classes.container}>
         <Link to="/" className={classes.logo}>
-          Food Mine!
+          FOOD-DISPENSING-APP
         </Link>
         <nav>
           <ul>
@@ -23,7 +23,9 @@ export default function Header() {
                 <div className={classes.menu}>
                   <Link to="/profile">Profile</Link>
                   <Link to="/orders">Orders</Link>
-                  <a onClick={logout}>Logout</a>
+                  <button onClick={logout} className={classes.logout_button}>
+                  Logout
+                  </button>
                 </div>
               </li>
             ) : (

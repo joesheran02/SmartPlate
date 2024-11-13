@@ -11,7 +11,7 @@ import Title from '../../components/Title/Title';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import OrderItemsList from '../../components/OrderItemsList/OrderItemsList';
-import Map from '../../components/Map/Map';
+// import Map from '../../components/Map/Map';
 export default function CheckoutPage() {
   const { cart } = useCart();
   const { user } = useAuth();
@@ -25,10 +25,10 @@ export default function CheckoutPage() {
   } = useForm();
 
   const submit = async data => {
-    if (!order.addressLatLng) {
-      toast.warning('Please select your location on the map');
-      return;
-    }
+    // if (!order.addressLatLng) {
+    //   toast.warning('Please select your location on the map');
+    //   return;
+    // }
 
     await createOrder({ ...order, name: data.name, address: data.address });
     navigate('/payment');
@@ -48,22 +48,32 @@ export default function CheckoutPage() {
             />
             <Input
               defaultValue={user.address}
-              label="Address"
+              label="Admission Number"
               {...register('address')}
               error={errors.address}
             />
           </div>
           <OrderItemsList order={order} />
         </div>
-        <div>
+        {/*<div>
           <Title title="Choose Your Location" fontSize="1.6rem" />
           <Map
-            location={order.addressLatLng}
+           location={order.addressLatLng}
             onChange={latlng => {
               console.log(latlng);
               setOrder({ ...order, addressLatLng: latlng });
             }}
           />
+        </div>
+*/}
+        <div>
+          <label for='dept'>Choose your Department Class</label>
+          <select id = 'dept' name ='dept'>
+            <option value='MCA'>MCA</option>
+            <option value='MBA'>MBA</option>
+            <option value='BTECH'>BTech</option>
+            <option value='MCA'>MTech</option>
+          </select>
         </div>
 
         <div className={classes.buttons_container}>
@@ -77,6 +87,11 @@ export default function CheckoutPage() {
           </div>
         </div>
       </form>
+      <script>
+        
+      </script>
     </>
+
+    
   );
 }

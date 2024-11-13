@@ -37,7 +37,7 @@ export default function OrderTrackPage() {
               {order.name}
             </div>
             <div>
-              <strong>Address</strong>
+              <strong>Class</strong>
               {order.address}
             </div>
             <div>

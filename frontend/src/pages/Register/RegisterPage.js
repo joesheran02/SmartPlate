@@ -16,10 +16,11 @@ export default function RegisterPage() {
   const [params] = useSearchParams();
   const returnUrl = params.get('returnUrl');
 
+
   useEffect(() => {
     if (!user) return;
     returnUrl ? navigate(returnUrl) : navigate('/');
-  }, [user]);
+  }, [user, navigate, returnUrl]);
 
   const {
     handleSubmit,
@@ -42,7 +43,7 @@ export default function RegisterPage() {
             label="Name"
             {...register('name', {
               required: true,
-              minLength: 5,
+              minLength: 3,
             })}
             error={errors.name}
           />
@@ -62,7 +63,7 @@ export default function RegisterPage() {
             label="Password"
             {...register('password', {
               required: true,
-              minLength: 5,
+              minLength: 3,
             })}
             error={errors.password}
           />
@@ -82,10 +83,10 @@ export default function RegisterPage() {
 
           <Input
             type="text"
-            label="Address"
+            label="Class"
             {...register('address', {
               required: true,
-              minLength: 10,
+              minLength: 3,
             })}
             error={errors.address}
           />

@@ -7,10 +7,20 @@ export const createOrder = async order => {
   } catch (error) {}
 };
 
-export const getNewOrderForCurrentUser = async () => {
-  const { data } = await axios.get('/api/orders/newOrderForCurrentUser');
-  return data;
+export const getNewOrderForCurrentUser  = async () => {
+  try {
+    const { data } = await axios.get('/api/orders/newOrderForCurrentUser ');
+    return data;
+  } catch (error) {
+    console.error('Error fetching new order for current user:', error.response.data);
+    throw error; // Re-throw the error for further handling
+  }
 };
+
+// export const getNewOrderForCurrentUser = async () => {
+//   const { data } = await axios.get('/api/orders/newOrderForCurrentUser');
+//   return data;
+// };
 
 export const pay = async paymentId => {
   try {

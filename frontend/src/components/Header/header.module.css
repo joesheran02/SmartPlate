@@ -1,13 +1,14 @@
 .header {
   background: white;
   padding: 0;
-  border-bottom: 1px solid #e72929;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.9);
 }
+/* e72929 */
 
 .header a {
-  color: #af1313;
+  color: #af1313 ;
 }
-
+/* */
 .header a:hover {
   background: #e72929;
   color: white;
@@ -62,4 +63,16 @@
   padding: 0.1rem 0.45rem;
   border-radius: 100rem;
   font-size: 0.9rem;
+}
+.logout_button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+}
+.logout_button :hover{
+  background-color: gray;
+  cursor: pointer;
 }
